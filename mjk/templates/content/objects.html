@@ -1,4 +1,3 @@
-
 {% load static %}
 <!doctype html>
 <html lang="ru">
@@ -6,46 +5,46 @@
 <head>
     <link rel="canonical" href="index.html">
     <meta name="robots" content="index, follow">
-
+      
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+  
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-
+  
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="">
     <meta name="twitter:creator" content="">
-
+  
     <meta property="og:locale" content="ru_RU">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="мжк менеджмент">
-    <meta property="og:title" content="мжк менеджмент | Комплексное обслуживание зданий">
+    <meta property="og:title" content="Объекты">
     <meta property="og:image" content="">
-    <meta property="og:url" content="https://mjk.ru/">
-    <meta property="og:description" content="Премиальное комплексное обслуживание жилых и коммерческих зданий: уборка, управление, безопасность, эксплуатация, современные технологии, прозрачная отчетность и оперативная обратная связь 24/7.">
-
+    <meta property="og:url" content="https://mjk.ru/object/">
+    <meta property="og:description" content="Список объектов, управляемых мжк менеджмент: жилые комплексы, клубные дома, паркинги и бизнес-центры. География, адреса, структура управления и обслуживания.">
+  
     <link rel="image_src" href="index.html" />
-
-    <title>мжк менеджмент | Комплексное обслуживание зданий</title>
-
-    <meta name="description" content="Премиальное комплексное обслуживание жилых и коммерческих зданий: уборка, управление, безопасность, эксплуатация, современные технологии, прозрачная отчетность и оперативная обратная связь 24/7.">
-    <meta name="keywords" content="Главная">
+  
+    <title>Объекты | мжк менеджмент</title>
+  
+    <meta name="description" content="Список объектов, управляемых мжк менеджмент: жилые комплексы, клубные дома, паркинги и бизнес-центры. География, адреса, структура управления и обслуживания.">
+    <meta name="keywords" content="Объекты">
 
     <link rel="shortcut icon" href="{% static 'img/logo.svg' %}">
-
+  
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
         <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-
-
+  
+  
   <link rel="stylesheet" href="{% static 'components/ajaxform/css/default.css' %}" type="text/css" />
 </head>
-
+  
   <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -63,10 +62,10 @@
             </div>
             <div class="col static pr-0 ml-xxl-5">
                 <nav class="header__menu">
-    <ul class=""><li><a class="active" href="{% url 'content:index' %}">Главная</a></li><li><a href="{% url 'content:about' %}" >О компании</a></li><li class="header__menu--dropdown"><a href="{% url 'content:services' %}">Услуги</a><ul class=""><li class="first"><a href="{% url 'content:services_cleaning' %}" >Клининг</a></li><li><a href="{% url 'content:services_exploitation' %}" >Эксплуатация</a></li><li><a href="{% url 'content:services_management' %}" >Управление</a></li><li class="last"><a href="{% url 'content:services_security' %}" >Безопасность</a></li></ul></li><li><a href="{% url 'content:objects' %}" >Объекты</a></li><li class="last"><a href="{% url 'content:contacts' %}" >Контакты</a></li></ul></nav>            </div>
+    <ul class=""><li class="first"><a href="{% url 'content:index' %}" >Главная</a></li><li><a href="{% url 'content:about' %}" >О компании</a></li><li class="header__menu--dropdown"><a href="{% url 'content:services' %}">Услуги</a><ul class=""><li class="first"><a href="{% url 'content:services_cleaning' %}" >Клининг</a></li><li><a href="{% url 'content:services_exploitation' %}" >Эксплуатация</a></li><li><a href="{% url 'content:services_management' %}" >Управление</a></li><li class="last"><a href="{% url 'content:services_security' %}" >Безопасность</a></li></ul></li><li><a class="active" href="{% url 'content:objects' %}">Объекты</a></li><li class="last"><a href="{% url 'content:contacts' %}" >Контакты</a></li></ul></nav>            </div>
             <div
                 class="col-auto d-none d-lg-flex flex-column align-items-start px-0 px-md-3 header-phone-mail-after-md">
-                <a class="header__phone" href="tel:">+7 999 99 99</a>                <a class="header__mail" href="mailto:mail@mjk.ru">mail@mjk.ru</a>            </div>
+                <a class="header__phone" href="tel:"> </a>                <a class="header__mail" href="mailto:mail@mjk.ru">mail@mjk.ru</a>            </div>
             <div class="col-auto d-none d-lg-block px-0 pl-sm-2 pr-sm-3 header-button-after-sm">
                 <button class="button button__gray open__kp">Запросить КП</button>
             </div>
@@ -81,10 +80,348 @@
         </div>
     </div>
 </header>
+    
+<section class="object__1">
+    <div class="breadcrumbs">
+    <div class="container">
+        <ol itemscope="" itemtype="https://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="{% url 'content:index' %}">
+                <span itemprop="name">Главная</span>
+                <meta itemprop="position" content="1">
+            </a>
+        </li>
+<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="{% url 'content:objects' %}">
+                <span itemprop="name">Объекты</span>
+                <meta itemprop="position" content="2">
+            </a>
+        </li></ol>        <h1>Объекты</h1>
+    </div>
+</div>
+    
 
-{% block body %}
-{% endblock %}
+    <div class="container">
+        <div class="row mx-n2">
+            <div class="col-md-6 px-2">
+    <div class="object__1--item">
+        <div class="object-swiper swiper">
+                        <div class="object__1--item__labels">
+                			</div>
+			
+            <div class="swiper-wrapper">
 
+                                                <div class="swiper-slide">
+                    <picture class="object__1--item__img">
+                        <img loading="lazy" src="{% static 'img/object__1--img1.png' %}" alt="ЖК Камелот">
+                    </picture>
+                </div>
+                                <div class="swiper-slide">
+                    <picture class="object__1--item__img">
+                        <img loading="lazy" src="{% static 'img/object__1--img1.png' %}" alt="ЖК Камелот">
+                    </picture>
+                </div>
+                                <div class="swiper-slide">
+                    <picture class="object__1--item__img">
+                        <img loading="lazy" src="{% static 'img/object__1--img1.png' %}" alt="ЖК Камелот">
+                    </picture>
+                </div>
+                            </div>
+            <div class="swiper-buttons">
+                <div class="swiper-button-prev">
+
+                </div>
+                <div class="swiper-button-next">
+
+                </div>
+            </div>
+        </div>
+        <div class="object__1--item__content">
+            <div class="object__1--item__title">ЖК Камелот</div>
+            <p class="object__1--item__place">Комсомольский проспект 32</p>
+            <div class="object__1--item__text"><p><span style="font-weight: 400;">Жилой комплекс бизнес &ndash; класса на 135 квартир с встроенными нежилыми помещениями и подземным паркингом на 151 машиномест.</span></p></div>
+                        <dl class="object__1--item__list">
+                				<div class="object__1--item__block">
+					<dt class="object__1--item__term">Общая площадь, м2</dt>
+					<dd class="object__1--item__value">28928.1</dd>
+				</div>
+								<div class="object__1--item__block">
+					<dt class="object__1--item__term">Количество этажей</dt>
+					<dd class="object__1--item__value">20</dd>
+				</div>
+							</dl>
+        </div>
+    </div>
+</div>
+<div class="col-md-6 px-2">
+    <div class="object__1--item">
+        <div class="object-swiper swiper">
+                        <div class="object__1--item__labels">
+                			</div>
+			
+            <div class="swiper-wrapper">
+
+                                                <div class="swiper-slide">
+                    <picture class="object__1--item__img">
+                        <img loading="lazy" src="{% static 'img/object__1--img2.png' %}" alt="ЖК Камелот">
+                    </picture>
+                </div>
+                            </div>
+            <div class="swiper-buttons">
+                <div class="swiper-button-prev">
+
+                </div>
+                <div class="swiper-button-next">
+
+                </div>
+            </div>
+        </div>
+        <div class="object__1--item__content">
+            <div class="object__1--item__title">ЖК Камелот</div>
+            <p class="object__1--item__place">Комсомольский проспект 32 к2</p>
+            <div class="object__1--item__text"><p><span style="font-weight: 400;">Жилой комплекс бизнес &ndash; класса на 170 квартир с встроенными нежилыми помещениями и подземным паркингом на 213 машиномест.</span></p></div>
+                        <dl class="object__1--item__list">
+                				<div class="object__1--item__block">
+					<dt class="object__1--item__term">Общая площадь в кв.м</dt>
+					<dd class="object__1--item__value">39897.9</dd>
+				</div>
+								<div class="object__1--item__block">
+					<dt class="object__1--item__term">Количество этажей</dt>
+					<dd class="object__1--item__value">18</dd>
+				</div>
+							</dl>
+        </div>
+    </div>
+</div>
+<div class="col-md-6 px-2">
+    <div class="object__1--item">
+        <div class="object-swiper swiper">
+                        <div class="object__1--item__labels">
+                			</div>
+			
+            <div class="swiper-wrapper">
+
+                                                <div class="swiper-slide">
+                    <picture class="object__1--item__img">
+                        <img loading="lazy" src="{% static 'img/object__1--img3.png' %}" alt="Клубный дом Тиволи">
+                    </picture>
+                </div>
+                            </div>
+            <div class="swiper-buttons">
+                <div class="swiper-button-prev">
+
+                </div>
+                <div class="swiper-button-next">
+
+                </div>
+            </div>
+        </div>
+        <div class="object__1--item__content">
+            <div class="object__1--item__title">Клубный дом Тиволи</div>
+            <p class="object__1--item__place">Стромынский переулок 6</p>
+            <div class="object__1--item__text"><p><span style="font-weight: 400;">Клубный дом бизнес класса на 98 нежилых помещений с подземным паркингом на 31 машиноместо</span></p></div>
+                        <dl class="object__1--item__list">
+                				<div class="object__1--item__block">
+					<dt class="object__1--item__term">Общая площадь в кв.м</dt>
+					<dd class="object__1--item__value">7 988,8</dd>
+				</div>
+								<div class="object__1--item__block">
+					<dt class="object__1--item__term">Количество этажей</dt>
+					<dd class="object__1--item__value">5</dd>
+				</div>
+							</dl>
+        </div>
+    </div>
+</div>
+<div class="col-md-6 px-2">
+    <div class="object__1--item">
+        <div class="object-swiper swiper">
+                        <div class="object__1--item__labels">
+                			</div>
+			
+            <div class="swiper-wrapper">
+
+                                                <div class="swiper-slide">
+                    <picture class="object__1--item__img">
+                        <img loading="lazy" src="{% static 'img/photo1693823847-1.jpeg' %}" alt="ЖК Балтийский">
+                    </picture>
+                </div>
+                                <div class="swiper-slide">
+                    <picture class="object__1--item__img">
+                        <img loading="lazy" src="{% static 'img/photo1693826995 (1).jpeg' %}" alt="ЖК Балтийский">
+                    </picture>
+                </div>
+                                <div class="swiper-slide">
+                    <picture class="object__1--item__img">
+                        <img loading="lazy" src="{% static 'img/photo1693826986.jpeg' %}" alt="ЖК Балтийский">
+                    </picture>
+                </div>
+                                <div class="swiper-slide">
+                    <picture class="object__1--item__img">
+                        <img loading="lazy" src="{% static 'img/photo1693827006 (1).jpeg' %}" alt="ЖК Балтийский">
+                    </picture>
+                </div>
+                                <div class="swiper-slide">
+                    <picture class="object__1--item__img">
+                        <img loading="lazy" src="{% static 'img/photo1693827006 (2).jpeg' %}" alt="ЖК Балтийский">
+                    </picture>
+                </div>
+                                <div class="swiper-slide">
+                    <picture class="object__1--item__img">
+                        <img loading="lazy" src="{% static 'img/photo1693826975.jpeg' %}" alt="ЖК Балтийский">
+                    </picture>
+                </div>
+                                <div class="swiper-slide">
+                    <picture class="object__1--item__img">
+                        <img loading="lazy" src="{% static 'img/photo1693827006.jpeg' %}" alt="ЖК Балтийский">
+                    </picture>
+                </div>
+                            </div>
+            <div class="swiper-buttons">
+                <div class="swiper-button-prev">
+
+                </div>
+                <div class="swiper-button-next">
+
+                </div>
+            </div>
+        </div>
+        <div class="object__1--item__content">
+            <div class="object__1--item__title">ЖК Балтийский</div>
+            <p class="object__1--item__place">Старопетровский проезд, д. 8</p>
+            <div class="object__1--item__text"><p><span style="font-weight: 400;">Жилой комплекс Комфорт касса на 728 жилых помещений и 53 нежилых помещений с подземным паркингом на 375 машиномест.</span></p></div>
+                        <dl class="object__1--item__list">
+                				<div class="object__1--item__block">
+					<dt class="object__1--item__term">Общая площадь в кв.м.</dt>
+					<dd class="object__1--item__value">84954.2</dd>
+				</div>
+								<div class="object__1--item__block">
+					<dt class="object__1--item__term">Количество этажей</dt>
+					<dd class="object__1--item__value">22</dd>
+				</div>
+							</dl>
+        </div>
+    </div>
+</div>
+<div class="col-md-6 px-2">
+    <div class="object__1--item">
+        <div class="object-swiper swiper">
+                        <div class="object__1--item__labels">
+                			</div>
+			
+            <div class="swiper-wrapper">
+
+                                                <div class="swiper-slide">
+                    <picture class="object__1--item__img">
+                        <img loading="lazy" src="{% static 'img/october-field1.jpeg' %}" alt="ЖК Октябрьское поле">
+                    </picture>
+                </div>
+                                <div class="swiper-slide">
+                    <picture class="object__1--item__img">
+                        <img loading="lazy" src="{% static 'img/october-field2.jpeg' %}" alt="ЖК Октябрьское поле">
+                    </picture>
+                </div>
+                                <div class="swiper-slide">
+                    <picture class="object__1--item__img">
+                        <img loading="lazy" src="{% static 'img/october-field3.jpeg' %}" alt="ЖК Октябрьское поле">
+                    </picture>
+                </div>
+                            </div>
+            <div class="swiper-buttons">
+                <div class="swiper-button-prev">
+
+                </div>
+                <div class="swiper-button-next">
+
+                </div>
+            </div>
+        </div>
+        <div class="object__1--item__content">
+            <div class="object__1--item__title">ЖК Октябрьское поле</div>
+            <p class="object__1--item__place">ул. Берзарина, 30 А</p>
+            <div class="object__1--item__text"><p><span style="font-weight: 400;">Жилой дом Комфорт класса на 1127 квартир с встроенными нежилыми помещениями и подземным паркингом на 285 машиномест</span></p></div>
+                        <dl class="object__1--item__list">
+                				<div class="object__1--item__block">
+					<dt class="object__1--item__term">Общая площадь в кв.м</dt>
+					<dd class="object__1--item__value">92102.3</dd>
+				</div>
+								<div class="object__1--item__block">
+					<dt class="object__1--item__term">Количество этажей</dt>
+					<dd class="object__1--item__value">25</dd>
+				</div>
+							</dl>
+        </div>
+    </div>
+</div>
+<div class="col-md-6 px-2">
+    <div class="object__1--item">
+        <div class="object-swiper swiper">
+                        <div class="object__1--item__labels">
+                			</div>
+			
+            <div class="swiper-wrapper">
+
+                                                <div class="swiper-slide">
+                    <picture class="object__1--item__img">
+                        <img loading="lazy" src="{% static 'img/projects/30b-1.webp' %}" alt="ЖК Октябрьское поле">
+                    </picture>
+                </div>
+                                <div class="swiper-slide">
+                    <picture class="object__1--item__img">
+                        <img loading="lazy" src="{% static 'img/projects/30b-2.webp' %}" alt="ЖК Октябрьское поле">
+                    </picture>
+                </div>
+                                <div class="swiper-slide">
+                    <picture class="object__1--item__img">
+                        <img loading="lazy" src="{% static 'img/projects/30b-3.webp' %}" alt="ЖК Октябрьское поле">
+                    </picture>
+                </div>
+                                <div class="swiper-slide">
+                    <picture class="object__1--item__img">
+                        <img loading="lazy" src="{% static 'img/projects/30b-4.webp' %}" alt="ЖК Октябрьское поле">
+                    </picture>
+                </div>
+                            </div>
+            <div class="swiper-buttons">
+                <div class="swiper-button-prev">
+
+                </div>
+                <div class="swiper-button-next">
+
+                </div>
+            </div>
+        </div>
+        <div class="object__1--item__content">
+            <div class="object__1--item__title">ЖК Октябрьское поле</div>
+            <p class="object__1--item__place">Ул. Берзарина 30Б</p>
+            <div class="object__1--item__text"><p><span style="font-weight: 400;">Жилой дом Комфорт класса на 312 квартир с встроенными нежилыми помещениями.</span></p></div>
+                        <dl class="object__1--item__list">
+                				<div class="object__1--item__block">
+					<dt class="object__1--item__term">Общая площадь в кв.м</dt>
+					<dd class="object__1--item__value">20347</dd>
+				</div>
+								<div class="object__1--item__block">
+					<dt class="object__1--item__term">Количество этажей</dt>
+					<dd class="object__1--item__value">25</dd>
+				</div>
+								<div class="object__1--item__block">
+					<dt class="object__1--item__term">Другая характеристика</dt>
+					<dd class="object__1--item__value">Значение</dd>
+				</div>
+								<div class="object__1--item__block">
+					<dt class="object__1--item__term">Еще одна характеристика</dt>
+					<dd class="object__1--item__value">И тоже значение</dd>
+				</div>
+							</dl>
+        </div>
+    </div>
+</div>         
+        </div>
+    </div>
+    
+    <div class="container">
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aba5b69d1ce1c97f6333592c3bca4294692f5840ab07f905d916ac6c0cb138e12&amp;source=constructor" width="100%" height="600" frameborder="0"></iframe>
+    </div>
+</section>
     <footer class="footer">
     <div class="container">
         <div class="row">
@@ -112,7 +449,7 @@
             <div class="col-md offset-xl-2 offset-lg-1">
                 <div class="row justify-content-sm-between">
                     <div class="col-sm-auto">
-                        <ul class="footer__list"><li class="first active"><a href="{% url 'content:index' %}" >Главная</a></li><li><a href="{% url 'content:about' %}" >О компании</a></li><li class="last"><a href="{% url 'content:objects' %}" >Объекты</a></li></ul>
+                        <ul class="footer__list"><li class="first"><a href="{% url 'content:index' %}" >Главная</a></li><li><a href="{% url 'content:about' %}" >О компании</a></li><li class="last active"><a href="{% url 'content:objects' %}">Объекты</a></li></ul>
                     </div>
                     <div class="col-sm-auto">
                         <ul class="footer__list">
@@ -129,12 +466,12 @@
                                 <a href="{% url 'content:contacts' %}">Контакты</a>
                             </li>
                         </ul>
-                                                <a class="footer__info" href="tel:">+7 999 99 99
+                                                <a class="footer__info" href="tel:">
                             </a>
                         <br>
                                                                         <a class="footer__info" href="mailto:mail@mjk.ru">mail@mjk.ru</a>
                                                 <div class="footer__develop">© 2026 mjk<br>
-
+                            
                         </div>
                     </div>
                 </div>
@@ -463,7 +800,7 @@
 <script src="{% static 'js/script.js' %}"> </script>
 <script src="{% static 'js/custom.js' %}"> </script>
 <script src="{% static 'components/ajaxform/js/default.js' %}"></script>
-<script>AjaxForm.initialize({"assetsUrl":"{% static 'components/ajaxform/' %}","actionUrl":"\/assets\/components\/ajaxform\/action.php","closeMessage":"close all","formSelector":"form.ajax_form","clearFieldsOnSuccess":true,"pageId":1});</script>
+<script>AjaxForm.initialize({"assetsUrl":"{% static 'components/ajaxform/' %}","actionUrl":"\/assets\/components\/ajaxform\/action.php","closeMessage":"close all","formSelector":"form.ajax_form","clearFieldsOnSuccess":true,"pageId":29});</script>
 </body>
 
 </html>

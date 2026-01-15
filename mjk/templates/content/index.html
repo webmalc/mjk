@@ -1,1 +1,200 @@
-hello world
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+        <section class="main__1">
+    <div class="swiper swiper-banner">
+        <div class="swiper-wrapper">
+
+
+            <div class="swiper-slide">
+                <picture class="main__1--img">
+                    <img src="{% static 'img/main__1--img1.png' %}" alt="Премиум-обслуживание коммерческих и жилых комплексов под ключ: от безупречной уборки до решения сложных управленческих вопросов">
+                </picture>
+                <div class="container">
+                    <h2><span>Премиум-обслуживание </span>коммерческих и жилых комплексов под ключ: от безупречной уборки до решения сложных управленческих вопросов</h2>
+                    <div class="main__1--lines">
+                        <span> </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <picture class="main__1--img">
+                    <img src="{% static 'img/main__1--img2.png' %}" alt="Никакой бюрократии: любой вопрос решается оперативно, а предупреждение проблем – еще на этапе планирования">
+                </picture>
+                <div class="container">
+                    <h2><span>Никакой бюрократии: </span>любой вопрос решается оперативно, а предупреждение проблем – еще на этапе планирования</h2>
+                    <div class="main__1--lines">
+                        <span> </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <picture class="main__1--img">
+                    <img src="{% static 'img/main__1--img3.png' %}" alt="Наш многолетний опыт и лояльность клиентов доказывают наш высокий уровень работы. Но даже, если возникнет непредвиденная ситуация, наши сотрудники с ней успешно справятся.">
+                </picture>
+                <div class="container">
+                    <h2><span>Наш многолетний опыт и лояльность клиентов </span>доказывают наш высокий уровень работы. Но даже, если возникнет непредвиденная ситуация, наши сотрудники с ней успешно справятся.</h2>
+                    <div class="main__1--lines">
+                        <span> </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>        <section class="main__2">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <picture class="main__2--img">
+                    <img loading="lazy" src="{% static 'img/main__2--img1.png' %}" alt="мжк МЕНЕДЖМЕНТ — высокие стандарты качества жизни день за днем">
+                </picture>
+            </div>
+            <div class="col ml-xl-5">
+                <h1>мжк МЕНЕДЖМЕНТ <br><span>— высокие стандарты качества<br>жизни день за днем</span></h1>
+                <p>Лучший сервис не бросается в глаза, он создает атмосферу, в которой Вам не нужно ни о чем беспокоиться</p>            </div>
+        </div>
+    </div>
+</section>        <section class="main__3">
+    <div class="container">
+        <h4>Почему выбирают нас?</h4>
+        <div class="row mb-4 mb-xl-5">
+                                    <div class="col-sm-6 col-md-4">
+                <div class="item__1">
+                    <picture class="item__1--img">
+                        <img loading="lazy" src="{% static 'img/item__1--img1.png' %}" alt="Обратная связь 24/7">
+                    </picture>
+                    <div class="item__1--content">
+                        <div class="item__1--title">Обратная связь 24/7</div>
+                        <p>Эффективная, быстрая и стабильная обратная связь. Наша многоуровневая система контроля не позволит оставить Вас без ответа</p>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-sm-6 col-md-4">
+                <div class="item__1">
+                    <picture class="item__1--img">
+                        <img loading="lazy" src="{% static 'img/item__1--img2.png' %}" alt="Новые технологии для премиального обслуживания">
+                    </picture>
+                    <div class="item__1--content">
+                        <div class="item__1--title">Новые технологии для премиального обслуживания</div>
+                        <p>Новейшее оборудование и цифровизация создают безопасность и комфорт современного уровня</p>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-sm-6 col-md-4">
+                <div class="item__1">
+                    <picture class="item__1--img">
+                        <img loading="lazy" src="{% static 'img/item__1--img3.png' %}" alt="Официальные документы">
+                    </picture>
+                    <div class="item__1--content">
+                        <div class="item__1--title">Официальные документы</div>
+                        <p>Полный пакет лицензий, сертификатов и аттестатов позволяет предложить широкий спектр услуг</p>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-sm-6 col-md-4">
+                <div class="item__1">
+                    <picture class="item__1--img">
+                        <img loading="lazy" src="{% static 'img/item__1--img4.png' %}" alt="Прозрачная система начислений">
+                    </picture>
+                    <div class="item__1--content">
+                        <div class="item__1--title">Прозрачная система начислений</div>
+                        <p>Мы предоставляем все данные, чтобы клиент смог самостоятельно рассчитать свою квартплату</p>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-sm-6 col-md-4">
+                <div class="item__1">
+                    <picture class="item__1--img">
+                        <img loading="lazy" src="{% static 'img/item__1--img5.png' %}" alt="Обслуживание 24/7">
+                    </picture>
+                    <div class="item__1--content">
+                        <div class="item__1--title">Обслуживание 24/7</div>
+                        <p>При поступлении любого сигнала гарантированно связываемся с клиентами в течение 10 минут – без задержек и отсрочек</p>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-sm-6 col-md-4">
+                <div class="item__1">
+                    <picture class="item__1--img">
+                        <img loading="lazy" src="{% static 'img/item__1--img6.png' %}" alt="Регулярная отчетность">
+                    </picture>
+                    <div class="item__1--content">
+                        <div class="item__1--title">Регулярная отчетность</div>
+                        <p>Отчеты о работах и расходах ежемесячно предоставляются на официальных каналах, чатах, форумах</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+                <div class="row mx-n2 align-items-center">
+            <div class="col-auto px-2">
+                <picture class="main__3--img">
+                    <img loading="lazy" src="{% static 'img/main__3--img1.png' %}" alt="Все аспекты премиум-сервиса">
+                </picture>
+            </div>
+            <div class="col px-2">
+                <div class="main__3--subtitle">Все аспекты премиум-сервиса</div>
+                <p class="main__3--text">Службы клининга, охраны, эксплуатации и управления обеспечивают повседневное удобство для каждого клиента.</p>
+            </div>
+        </div>
+            </div>
+</section>        <div class="main__4">
+    <div class="container">
+        <div class="item__2--container">
+            <a class="item__2" href="{% url 'content:services_cleaning' %}">
+    <picture class="item__2--img">
+        <img loading="lazy" src="{% static 'img/item__2--img3.png' %}" alt="Клининг">
+    </picture>
+    <h4>Клининг</h4>
+    <p>Профессиональная ежедневная уборка холлов , паркинга и придомовой территории. Контроль за своевременным вывозом мусора</p>
+    <div class="item__2--arrow">
+    </div>
+</a>
+<a class="item__2" href="{% url 'content:services_exploitation' %}">
+    <picture class="item__2--img">
+        <img loading="lazy" src="{% static 'img/item__2--img2.png' %}" alt="Эксплуатация">
+    </picture>
+    <h4>Эксплуатация</h4>
+    <p>Профилактика аварий и круглосуточное дежурство техников. Выполняем ремонт по результатам осмотра, не дожидаясь жалоб</p>
+    <div class="item__2--arrow">
+    </div>
+</a>
+<a class="item__2" href="{% url 'content:services_management' %}">
+    <picture class="item__2--img">
+        <img loading="lazy" src="{% static 'img/item__2--img1.png' %}" alt="Управление">
+    </picture>
+    <h4>Управление</h4>
+    <p>Отлаженная единая система управления, эксплуатации, клининга и охраны домов и зданий</p>
+    <div class="item__2--arrow">
+    </div>
+</a>
+<a class="item__2" href="{% url 'content:services_security' %}">
+    <picture class="item__2--img">
+        <img loading="lazy" src="{% static 'img/item__2--img4.png' %}" alt="Безопасность">
+    </picture>
+    <h4>Безопасность</h4>
+    <p>Разработка концепции безопасности зданий. Собственная служба консьержей и батлеров и полное взаимодействие с профессиональными ЧОП</p>
+    <div class="item__2--arrow">
+    </div>
+</a>
+        </div>
+    </div>
+</div>        <section class="main__2 main__2--bg1">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <picture class="main__2--img">
+                    <img loading="lazy" src="{% static 'img/main__2--img2.png' %}" alt="мжк МЕНЕДЖМЕНТ — премиум-сервис комплексного обслуживания, настроенный на Вас">
+                </picture>
+            </div>
+            <div class="col ml-xl-5">
+                <h3>мжк МЕНЕДЖМЕНТ <br><span>— премиум-сервис комплексного<br>обслуживания, настроенный на Вас</span></h3>
+                                    </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
