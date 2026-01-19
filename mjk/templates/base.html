@@ -56,10 +56,12 @@
         <div class="row align-items-center">
             <div class="col-auto">
                 <a class="header__logo" href="{% url 'content:index' %}">
-                    <picture>
-                        <img src="{% static 'img/header__logo.svg' %}" alt="мжк менеджмент">
+                    <picture style="display: flex">
+                        <!-- <img src="{% static 'img/header__logo.svg' %}" alt="мжк менеджмент"> -->
+                        <img src="{% static 'img/logo.png' %}" alt="мжк менеджмент">
                     </picture>
                 </a>
+
             </div>
             <div class="col static pr-0 ml-xxl-5">
                 <nav class="header__menu">
@@ -89,11 +91,6 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-xl-auto">
-                <a class="footer__logo" href="{% url 'content:index' %}">
-                    <picture>
-                        <img src="{% static 'img/footer__logo.svg' %}" alt="мжк менеджмент">
-                    </picture>
-                </a>
                 <div class="footer__links footer__links-desktop">
                                         <a href="https://itunes.apple.com/app/id6743001150?utm_source=domyland.app" target="_blank">
                         <img src="{% static 'img/app-store.png' %}" width="157" height="46" alt="" loading="lazy" decoding="async">
