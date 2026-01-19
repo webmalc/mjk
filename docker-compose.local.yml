@@ -20,7 +20,7 @@ services:
       - ./.envs/.local/.django
       - ./.envs/.local/.postgres
     ports:
-      - '8000:8000'
+      - "8000:8000"
     command: /start
 
   postgres:
@@ -51,20 +51,20 @@ services:
     ports: []
     command: /start-celeryworker
 
-  celerybeat:
-    <<: *django
-    image: mjk_local_celerybeat
-    container_name: mjk_local_celerybeat
-    depends_on:
-      - redis
-      - postgres
-    ports: []
-    command: /start-celerybeat
+  # celerybeat:
+  #   <<: *django
+  #   image: mjk_local_celerybeat
+  #   container_name: mjk_local_celerybeat
+  #   depends_on:
+  #     - redis
+  #     - postgres
+  #   ports: []
+  #   command: /start-celerybeat
 
-  flower:
-    <<: *django
-    image: mjk_local_flower
-    container_name: mjk_local_flower
-    ports:
-      - '5555:5555'
-    command: /start-flower
+  # flower:
+  #   <<: *django
+  #   image: mjk_local_flower
+  #   container_name: mjk_local_flower
+  #   ports:
+  #     - '5555:5555'
+  #   command: /start-flower
