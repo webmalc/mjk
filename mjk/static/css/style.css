@@ -9161,4 +9161,27 @@ section.main__1 {
   .header__menu {
     top: 63px;
   }
+  .header__mobile__phone {
+      float: left;
+      display: inline-block;
+      padding: 6px 5px 0px 0px;
+      font-size: 12px;
+  }
+  .header-container {
+      padding-right: 0px;
+  }
+
+  .header__mobile__phone {
+    color: #333;
+  }
+  .header__mobile__phone:hover {
+    color: #777;
+  }
+}
+
+@media (max-width: 354px) {
+
+  .header__mobile__phone {
+    display: none;
+  }
 }
