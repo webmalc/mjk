@@ -1,4 +1,11 @@
 from django.views.generic import TemplateView
+from django.shortcuts import render, get_object_or_404
+from .models import Content
+
+
+def content_render(request, slug="index"):
+    content = get_object_or_404(Content, slug=slug)
+    return render(request, "content/content.html", {"content": content})
 
 
 class IndexView(TemplateView):
