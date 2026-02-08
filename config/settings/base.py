@@ -193,6 +193,9 @@ TEMPLATES = [
                 "django.contrib.messages.context_processors.messages",
                 "mjk.users.context_processors.allauth_settings",
             ],
+            "builtins": [
+                "django.templatetags.static",  # Now {% static %} works everywhere
+            ],
         },
     },
 ]

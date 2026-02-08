@@ -1,6 +1,5 @@
 from django.urls import path
 from .views import (
-    IndexView,
     AboutView,
     ServicesView,
     ServicesCleaningView,
@@ -8,7 +7,6 @@ from .views import (
     ServicesManagementView,
     ServicesSecurityView,
     ObjectsView,
-    ContactsView,
     PrivacyPolicyView,
     content_render,
 )
@@ -16,7 +14,7 @@ from .views import (
 app_name = "content"
 urlpatterns = [
     path("", view=content_render, name="index"),
-    path("/<str:slug>/", view=content_render, name="content"),
+    path("<str:slug>/", view=content_render, name="content"),
     path("about/", view=AboutView.as_view(), name="about"),
     path("services/", view=ServicesView.as_view(), name="services"),
     path(
@@ -40,6 +38,6 @@ urlpatterns = [
         name="services_security",
     ),
     path("objects/", view=ObjectsView.as_view(), name="objects"),
-    path("contacts/", view=ContactsView.as_view(), name="contacts"),
+    # path("contacts/", view=ContactsView.as_view(), name="contacts"),
     path("privacy-policy/", view=PrivacyPolicyView.as_view(), name="privacy_policy"),
 ]
