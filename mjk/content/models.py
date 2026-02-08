@@ -89,4 +89,6 @@ class Feedback(models.Model):
         ordering = ["-created_at"]
 
     def __str__(self):
-        return self.slug
+        return (
+            f"Обратная связь {self.phone} {self.created_at.strftime('%d.%m.%Y %H:%M')}"
+        )
