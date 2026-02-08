@@ -6,6 +6,7 @@ from .models import Content, Feedback
 from django.template import Template
 from django.utils.safestring import mark_safe
 from django.template import RequestContext
+from .tasks import send_feedback_notification_email
 
 CACHE_TIMEOUT = 60 * 60 * 24 * 7 * 30  # 30 days
 
@@ -40,6 +41,7 @@ def add_feedback(request):
         email=email,
         note=note,
     )
+    send_feedback_notification_email.delay(name, phone, email, note)
     response = redirect("content:content", slug="contacts")
     response["Location"] += "?success=1"
     return response
