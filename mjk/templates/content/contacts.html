@@ -159,4 +159,16 @@
 <script src="{% static 'components/ajaxform/js/default.js' %}"></script>
 <script>AjaxForm.initialize({"assetsUrl":"{% static 'components/ajaxform/' %}","actionUrl":"\/assets\/components\/ajaxform\/action.php","closeMessage":"close all","formSelector":"form.ajax_form","clearFieldsOnSuccess":true,"pageId":30});</script>
 
+{% if request.GET.success %}
+<script>
+$(document).ready(function() {
+    $('.modal__feedback-success').show();
+    setTimeout(function() {
+        $('.modal__feedback-success').hide();
+        $('body').attr('style', '');
+    }, 5000);
+});
+</script>
+{% endif %}
+
 {% endblock %}

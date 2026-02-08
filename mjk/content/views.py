@@ -1,8 +1,8 @@
 from django.views.generic import TemplateView
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views.decorators.cache import cache_page
 from django.utils.decorators import method_decorator
-from .models import Content
+from .models import Content, Feedback
 from django.template import Template
 from django.utils.safestring import mark_safe
 from django.template import RequestContext
@@ -13,7 +13,7 @@ CACHE_TIMEOUT = 60 * 60 * 24 * 7 * 30  # 30 days
 @cache_page(CACHE_TIMEOUT)
 def content_render(request, slug="index"):
     if request.method == "POST" and slug == "contacts":
-        pass
+        return add_feedback(request)
     content = get_object_or_404(Content, slug=slug)
     template = Template(content.content)
     context = RequestContext(request, {})
@@ -23,6 +23,26 @@ def content_render(request, slug="index"):
         "content/content.html",
         {"content": content, "rendered": mark_safe(rendered)},
     )
+
+
+def add_feedback(request):
+    name = request.POST.get("name", "")
+    phone = request.POST.get("tel", "")
+    email = request.POST.get("email", "")
+    note = request.POST.get("text", "")
+
+    if not phone:
+        return redirect("content:content", slug="contacts")
+
+    Feedback.objects.create(
+        name=name,
+        phone=phone,
+        email=email,
+        note=note,
+    )
+    response = redirect("content:content", slug="contacts")
+    response["Location"] += "?success=1"
+    return response
 
 
 @method_decorator(cache_page(CACHE_TIMEOUT), name="get")
