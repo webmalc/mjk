@@ -82,6 +82,7 @@ THIRD_PARTY_APPS = [
     "allauth.mfa",
     "allauth.socialaccount",
     "django_celery_beat",
+    "tinymce",
 ]
 
 LOCAL_APPS = [
@@ -323,7 +324,7 @@ ACCOUNT_FORMS = {"signup": "mjk.users.forms.UserSignupForm"}
 # https://docs.allauth.org/en/latest/socialaccount/configuration.html
 SOCIALACCOUNT_ADAPTER = "mjk.users.adapters.SocialAccountAdapter"
 # https://docs.allauth.org/en/latest/socialaccount/configuration.html
-SOCIALACCOUNT_FORMS = {"signup": "mjk.users.forms.UserSocialSignupForm"}
+SOCIALACCOUNT_FORMS = {"signup": "mjk.usppers.forms.UserSocialSignupForm"}
 
 
 # Your stuff...

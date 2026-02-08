@@ -1,4 +1,5 @@
 from django.db import models
+from tinymce import models as tinymce_models
 
 # Create your models here.
 
@@ -9,7 +10,7 @@ class Content(models.Model):
         unique=True,
         verbose_name="URL",
     )
-    content = models.TextField(verbose_name="контент")
+    content = tinymce_models.HTMLField(verbose_name="контент")
     description = models.CharField(
         max_length=255,
         null=True,
