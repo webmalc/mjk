@@ -204,6 +204,20 @@ FORM_RENDERER = "django.forms.renderers.TemplatesSetting"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
+# TinyMCE
+# ------------------------------------------------------------------------------
+TINYMCE_DEFAULT_CONFIG = {
+    "height": "500px",
+    "menubar": "file edit view insert format tools table help",
+    "plugins": "advlist autolink lists link image charmap print preview anchor "
+    "searchreplace visualblocks code fullscreen insertdatetime media "
+    "table paste code help wordcount",
+    "toolbar": "undo redo | formatselect | bold italic backcolor | "
+    "alignleft aligncenter alignright alignjustify | "
+    "bullist numlist outdent indent | removeformat | code | help",
+    "custom_undo_redo_levels": 10,
+}
+
 # FIXTURES
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#fixture-dirs
