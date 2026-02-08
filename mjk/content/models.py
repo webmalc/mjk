@@ -45,3 +45,48 @@ class Content(models.Model):
 
     def __str__(self):
         return self.slug
+
+
+class Feedback(models.Model):
+    name = models.CharField(
+        max_length=255,
+        null=True,
+        blank=True,
+        verbose_name="имя",
+    )
+    phone = models.CharField(
+        max_length=255,
+        verbose_name="телефон",
+    )
+    email = models.CharField(
+        max_length=255,
+        null=True,
+        blank=True,
+        verbose_name="e-mail",
+    )
+    note = models.TextField(
+        max_length=255,
+        null=True,
+        blank=True,
+        verbose_name="комметарий",
+    )
+    created_at = models.DateTimeField(
+        auto_now_add=True,
+        verbose_name="дата создания",
+    )
+    updated_at = models.DateTimeField(
+        auto_now=True,
+        verbose_name="дата обновления",
+    )
+    is_active = models.BooleanField(
+        default=False,
+        verbose_name="Обрабатана?",
+    )
+
+    class Meta:
+        verbose_name = "обратная связь"
+        verbose_name_plural = "обратная связь"
+        ordering = ["-created_at"]
+
+    def __str__(self):
+        return self.slug
