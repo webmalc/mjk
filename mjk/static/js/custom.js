@@ -15,6 +15,11 @@ $(document).on('af_complete', function (event, response) {
         setTimeout(() => {
             $('.modal__feedback-success').hide()
             $('body').attr('style', '')
+            if (window.history.replaceState) {
+                const url = new URL(window.location.href)
+                url.searchParams.delete('success')
+                window.history.replaceState({}, document.title, url.toString())
+            }
         }, 5000);
 
      

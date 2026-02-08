@@ -166,6 +166,11 @@ $(document).ready(function() {
     setTimeout(function() {
         $('.modal__feedback-success').hide();
         $('body').attr('style', '');
+        if (window.history.replaceState) {
+            var url = new URL(window.location.href);
+            url.searchParams.delete('success');
+            window.history.replaceState({}, document.title, url.toString());
+        }
     }, 5000);
 });
 </script>
