@@ -1,152 +1,138 @@
 {% load static %}
 <!doctype html>
 <html lang="ru">
-
-<head>
-    <link rel="canonical" href="index.html">
-    <meta name="robots" content="index, follow">
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="">
-    <meta name="twitter:creator" content="">
-
-    <meta property="og:locale" content="ru_RU">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="мжк менеджмент">
-    <meta property="og:title" content="мжк менеджмент | Комплексное обслуживание зданий">
-    <meta property="og:image" content="">
-    <meta property="og:url" content="https://mjk.ru/">
-    <meta property="og:description" content="{% block description %}МЖК менеджмент{% endblock %}.">
-
-    <link rel="image_src" href="index.html" />
-
-    <title>мжк менеджмент | Комплексное обслуживание зданий</title>
-
-    <meta name="description" content="Премиальное комплексное обслуживание жилых и коммерческих зданий: уборка, управление, безопасность, эксплуатация, современные технологии, прозрачная отчетность и оперативная обратная связь 24/7.">
-    <meta name="keywords" content="{% block keywords %}МЖК менеджмент{% endblock %}">
-
-    <link rel="shortcut icon" href="{% static 'img/logo.svg' %}">
-
-    <link rel="stylesheet" href="{% static 'css/style_2.css' %}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-
-
-    <link rel="stylesheet" href="{% static 'components/ajaxform/css/default.css' %}" type="text/css" />
-</head>
-
-  <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
-<body>
-    <header class="header">
-    <div class="container relative">
-        <div class="row align-items-center">
-            <div class="col-auto header-container">
-                <a class="header__logo" href="{% url 'content:index' %}">
-                    <picture style="display: flex">
+   <head>
+      <link rel="canonical" href="index.html">
+      <meta name="robots" content="index, follow">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="format-detection" content="telephone=no">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="">
+      <meta name="twitter:creator" content="">
+      <meta property="og:locale" content="ru_RU">
+      <meta property="og:type" content="website">
+      <meta property="og:site_name" content="мжк менеджмент">
+      <meta property="og:title" content="мжк менеджмент | Комплексное обслуживание зданий">
+      <meta property="og:image" content="">
+      <meta property="og:url" content="https://mjk.ru/">
+      <meta property="og:description" content="{% block description %}МЖК менеджмент{% endblock %}.">
+      <link rel="image_src" href="index.html" />
+      <title>мжк менеджмент | Комплексное обслуживание зданий</title>
+      <meta name="description" content="Премиальное комплексное обслуживание жилых и коммерческих зданий: уборка, управление, безопасность, эксплуатация, современные технологии, прозрачная отчетность и оперативная обратная связь 24/7.">
+      <meta name="keywords" content="{% block keywords %}МЖК менеджмент{% endblock %}">
+      <link rel="shortcut icon" href="{% static 'img/logo.svg' %}">
+      <link rel="stylesheet" href="{% static 'css/style_2.css' %}">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="{% static 'components/ajaxform/css/default.css' %}" type="text/css" />
+   </head>
+   <!--[if lt IE 9]>
+   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+   <![endif]-->
+   <body>
+      <header class="header">
+         <div class="container relative">
+            <div class="row align-items-center">
+               <div class="col-auto header-container">
+                  <a class="header__logo" href="{% url 'content:index' %}">
+                     <picture style="display: flex">
                         <!-- <img src="{% static 'img/header__logo.svg' %}" alt="мжк менеджмент"> -->
                         <img src="{% static 'img/logo.png' %}" alt="мжк менеджмент">
-                    </picture>
-                </a>
-
+                     </picture>
+                  </a>
+               </div>
+               <div class="col static pr-0 ml-xxl-5">
+                  <nav class="header__menu">
+                     <ul class="">
+                       <li><a {% if request.path == '/' %}class="active"{% endif %} href="{% url 'content:index' %}">Главная</a></li>
+                        <li><a {% if 'services' in request.path %}class="active"{% endif %}  href="{% url 'content:content' 'services' %}" >Услуги</a></li>
+                        <li><a {% if 'properties' in request.path %}class="active"{% endif %}  href="{% url 'content:content' 'properties' %}" >Объекты</a></li>
+                        <li class="last"><a {% if 'contacts' in request.path %}class="active"{% endif %} href="{% url 'content:content' slug='contacts' %}" >Контакты</a></li>
+                     </ul>
+                  </nav>
+               </div>
+               <div
+                  class="col-auto d-none d-lg-flex flex-column align-items-start px-0 px-md-3 header-phone-mail-after-md">
+                  <a class="header__phone" href="tel:+74955005080">+7 495 500 50 80</a>                <a class="header__mail" href="mailto:aranda@mgk-group.ru">aranda@mgk-group.ru</a>
+               </div>
+               <div class="col-auto d-none d-lg-block px-0 pl-sm-2 pr-sm-3 header-button-after-sm">
+                  <button class="button button__gray" onclick="window.location.href='{% url 'content:content' slug='contacts' %}';" >Заказать звонок</button>
+               </div>
+               <div class="col-auto d-lg-none pl-0">
+                  <a class="header__mobile__phone" href="tel:+74955005080">495 500 5080</a>
+                  <button class="hamburger hamburger--collapse" type="button">
+                  <span class="hamburger-box">
+                  <span class="hamburger-inner">
+                  </span>
+                  </span>
+                  </button>
+               </div>
             </div>
-            <div class="col static pr-0 ml-xxl-5">
-                <nav class="header__menu">
-    <ul class=""><li><a class="active" href="{% url 'content:index' %}">Главная</a></li><li><a href="{% url 'content:about' %}" >О компании</a></li><li class="header__menu--dropdown"><a href="{% url 'content:services' %}">Услуги</a><ul class=""><li class="first"><a href="{% url 'content:services_cleaning' %}" >Клининг</a></li><li><a href="{% url 'content:services_exploitation' %}" >Эксплуатация</a></li><li><a href="{% url 'content:services_management' %}" >Управление</a></li><li class="last"><a href="{% url 'content:services_security' %}" >Безопасность</a></li></ul></li><li><a href="{% url 'content:objects' %}" >Объекты</a></li><li class="last"><a href="{% url 'content:content' slug='contacts' %}" >Контакты</a></li></ul></nav>            </div>
-            <div
-                class="col-auto d-none d-lg-flex flex-column align-items-start px-0 px-md-3 header-phone-mail-after-md">
-                <a class="header__phone" href="tel:+74955005080">+7 495 500 50 80</a>                <a class="header__mail" href="mailto:aranda@mgk-group.ru">aranda@mgk-group.ru</a>            </div>
-            <div class="col-auto d-none d-lg-block px-0 pl-sm-2 pr-sm-3 header-button-after-sm">
-              <button class="button button__gray" onclick="window.location.href='{% url 'content:content' slug='contacts' %}';" >Заказать звонок</button>
-            </div>
-            <div class="col-auto d-lg-none pl-0">
-                <a class="header__mobile__phone" href="tel:+74955005080">495 500 5080</a>
-                <button class="hamburger hamburger--collapse" type="button">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner">
-                        </span>
-                    </span>
-                </button>
-            </div>
-        </div>
-    </div>
-</header>
-
-{% block body %}
-{% endblock %}
-
-    <footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-xl-auto">
-                <div class="footer__links footer__links-desktop"></div>
-            </div>
-            <div class="col-md offset-xl-2 offset-lg-1">
-                <div class="row justify-content-sm-between">
-                    <div class="col-sm-auto">
+         </div>
+      </header>
+      {% block body %}
+      {% endblock %}
+      <footer class="footer">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-4 col-xl-auto">
+                  <div class="footer__links footer__links-desktop"></div>
+               </div>
+               <div class="col-md offset-xl-2 offset-lg-1">
+                  <div class="row justify-content-sm-between">
+                     <div class="col-sm-auto">
                         <ul class="footer__list">
-                          <li class="first"><a href="{% url 'content:index' %}" >Главная</a></li>
-                          <li><a href="{% url 'content:about' %}" >О компании</a></li>
-                          <li><a href="{% url 'content:about' %}" >Услуги</a></li>
-                          <li class="last"><a href="{% url 'content:objects' %}" >Объекты</a></li>
+                           <li class="first"><a href="{% url 'content:index' %}" >Главная</a></li>
+                           <li><a href="{% url 'content:content' slug='services' %}" >Услуги</a></li>
+                           <li class="last"><a href="{% url 'content:content' slug='properties' %}" >Объекты</a></li>
                         </ul>
-                    </div>
-                    <div class="col-sm-auto">
+                     </div>
+                     <div class="col-sm-auto">
                         <ul class="footer__list">
-                          <li class="first calllink"><a href="{% url 'content:content' slug='contacts' %}" style="color: #333;">Заказать звонок</a></li>
+                           <li class="first calllink"><a href="{% url 'content:content' slug='contacts' %}" style="color: #333;">Заказать звонок</a></li>
                         </ul>
-                    </div>
-                    <div class="col-sm-auto">
+                     </div>
+                     <div class="col-sm-auto">
                         <ul class="footer__list">
-                            <li>
-                                <a href="{% url 'content:content' slug='contacts' %}">Контакты</a>
-                            </li>
+                           <li>
+                              <a href="{% url 'content:content' slug='contacts' %}">Контакты</a>
+                           </li>
                         </ul>
-                                                <a class="footer__info" href="tel:+74955005080">+7 495 500 50 80
-                            </a>
+                        <a class="footer__info" href="tel:+74955005080">+7 495 500 50 80
+                        </a>
                         <br>
-                                                                        <a class="footer__info" href="mailto:aranda@mgk-group.ru">aranda@mgk-group.ru</a>
-                                                <div class="footer__develop">© {% now "Y" %} МЖК менеджмент<br>
-
+                        <a class="footer__info" href="mailto:aranda@mgk-group.ru">aranda@mgk-group.ru</a>
+                        <div class="footer__develop">© {% now "Y" %} МЖК менеджмент<br>
                         </div>
-                    </div>
-                </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </div>
-</footer>
-
-<div class="modal modal__feedback-success">
-    <div class="container">
-        <div class="form modal__container">
-            <picture class="modal__success"><img src="{% static 'img/success-check.svg' %}" alt=""></picture>
-            <div class="form__title"> ОТПРАВЛЕНО!</div>
-            <p>Ваша заявка успешно отправлена,<br> ждите обратной связи.</p>
-        </div>
-    </div>
-</div>
-
-<script src="{% static 'js/jquery.min.js' %}"> </script>
-<script src="{% static 'js/jquery.mask.min.js' %}"> </script>
-<script src="{% static 'js/swiper-bundle.min.js' %}"> </script>
-<script src="{% static 'js/checkWebP.js' %}"> </script>
-<script src="{% static 'js/jquery.nice-select.min.js' %}"> </script>
-<script src="{% static 'js/script.js' %}"> </script>
-<script src="{% static 'js/custom.js' %}"> </script>
-<script src="{% static 'components/ajaxform/js/default.js' %}"></script>
-<script>AjaxForm.initialize({"assetsUrl":"{% static 'components/ajaxform/' %}","actionUrl":"\/assets\/components\/ajaxform\/action.php","closeMessage":"close all","formSelector":"form.ajax_form","clearFieldsOnSuccess":true,"pageId":1});</script>
-</body>
-
+         </div>
+      </footer>
+      <div class="modal modal__feedback-success">
+         <div class="container">
+            <div class="form modal__container">
+               <picture class="modal__success"><img src="{% static 'img/success-check.svg' %}" alt=""></picture>
+               <div class="form__title"> ОТПРАВЛЕНО!</div>
+               <p>Ваша заявка успешно отправлена,<br> ждите обратной связи.</p>
+            </div>
+         </div>
+      </div>
+      <script src="{% static 'js/jquery.min.js' %}"> </script>
+      <script src="{% static 'js/jquery.mask.min.js' %}"> </script>
+      <script src="{% static 'js/swiper-bundle.min.js' %}"> </script>
+      <script src="{% static 'js/checkWebP.js' %}"> </script>
+      <script src="{% static 'js/jquery.nice-select.min.js' %}"> </script>
+      <script src="{% static 'js/script.js' %}"> </script>
+      <script src="{% static 'js/custom.js' %}"> </script>
+      <script src="{% static 'components/ajaxform/js/default.js' %}"></script>
+      <script>AjaxForm.initialize({"assetsUrl":"{% static 'components/ajaxform/' %}","actionUrl":"\/assets\/components\/ajaxform\/action.php","closeMessage":"close all","formSelector":"form.ajax_form","clearFieldsOnSuccess":true,"pageId":1});</script>
+   </body>
 </html>
