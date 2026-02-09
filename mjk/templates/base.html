@@ -21,7 +21,7 @@
       <meta property="og:url" content="https://mjk.ru/">
       <meta property="og:description" content="{% block description %}МЖК менеджмент{% endblock %}.">
       <link rel="image_src" href="index.html" />
-      <title>мжк менеджмент | Комплексное обслуживание зданий</title>
+      <title>МЖК менеджмент | {% block title %}Главная{% endblock %}</title>
       <meta name="description" content="Премиальное комплексное обслуживание жилых и коммерческих зданий: уборка, управление, безопасность, эксплуатация, современные технологии, прозрачная отчетность и оперативная обратная связь 24/7.">
       <meta name="keywords" content="{% block keywords %}МЖК менеджмент{% endblock %}">
       <link rel="shortcut icon" href="{% static 'img/logo.svg' %}">
@@ -62,7 +62,7 @@
                   <a class="header__phone" href="tel:+74955005080">+7 495 500 50 80</a>                <a class="header__mail" href="mailto:aranda@mgk-group.ru">aranda@mgk-group.ru</a>
                </div>
                <div class="col-auto d-none d-lg-block px-0 pl-sm-2 pr-sm-3 header-button-after-sm">
-                  <button class="button button__gray" onclick="window.location.href='{% url 'content:content' slug='contacts' %}';" >Заказать звонок</button>
+                  <button class="button button__gray" onclick="window.location.href='{% url 'content:content' slug='contacts' %}#contacts-form';" >Заказать звонок</button>
                </div>
                <div class="col-auto d-lg-none pl-0">
                   <a class="header__mobile__phone" href="tel:+74955005080">495 500 5080</a>
@@ -95,7 +95,7 @@
                      </div>
                      <div class="col-sm-auto">
                         <ul class="footer__list">
-                           <li class="first calllink"><a href="{% url 'content:content' slug='contacts' %}" style="color: #333;">Заказать звонок</a></li>
+                           <li class="first calllink"><a href="{% url 'content:content' slug='contacts' %}#contacts-form" style="color: #333;">Заказать звонок</a></li>
                         </ul>
                      </div>
                      <div class="col-sm-auto">

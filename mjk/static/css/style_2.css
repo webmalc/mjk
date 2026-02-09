@@ -4125,9 +4125,8 @@ iframe {
   padding-bottom: 135px;
 }
 .object__1--item {
-  border-radius: 15px;
   display: block;
-  background-color: #131315;
+  background-color: #2f3136;
   margin-bottom: 19px;
 }
 .object__1--item__img {
@@ -4150,11 +4149,10 @@ iframe {
   content: "";
   position: absolute;
   width: 32px;
-  height: 20px;
-  border-radius: 20px;
+  height: 3px;
   background: #fff;
   left: 6%;
-  top: calc(33% - 2px);
+  top: calc(53% - 2px);
 }
 .object__1--item__place {
   padding-left: 120px;
@@ -4224,11 +4222,10 @@ iframe {
 
 /* 12.12.2025 */
 .object__1 .swiper-buttons {
-  border-top-left-radius: 25px;
   position: absolute;
   width: 159px;
   height: 62px;
-  background: #131315;
+  background-color: #2f3136;
   z-index: 20;
   bottom: 0;
   right: 0;
@@ -8545,7 +8542,7 @@ iframe {
     height: 210px;
   }
   .object__1--item__content {
-    padding: 20px 0;
+    padding: 20px 10px 20px 10px;
   }
   .object__1--item__title {
     font-size: 22px;
@@ -8554,6 +8551,8 @@ iframe {
   .object__1--item__title:before {
     width: 30px;
     height: 2px;
+    left: 0%;
+    top: calc(52% - 2px);
   }
   .object__1--item__labels {
     top: 12px;
@@ -8868,7 +8867,7 @@ iframe {
     background-repeat: no-repeat;
   }
   .object__1--item__content {
-    padding: 15px 0;
+    padding: 15px 10px;
   }
   .object__1--item__title {
     font-size: 20px;
@@ -9177,6 +9176,9 @@ section.main__1 {
   .header__mobile__phone:hover {
     color: #777;
   }
+  .services-container {
+    margin-bottom: 50px;
+  }
 }
 
 @media (max-width: 354px) {
@@ -9195,4 +9197,15 @@ section.main__1 {
 }
 .calllink:hover {
   padding: 8px;
+}
+.services-container {
+  margin-bottom: 70px;
+}
+.services-container picture {
+  background: rgba(0, 0, 0, 0.7);
+  filter: brightness(80%);
+}
+.services-container p {
+  font-size: 20px;
+  margin-bottom: 10px;
 }

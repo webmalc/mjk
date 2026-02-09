@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %}{% if content.title %}{{content.title }}{% else %}{{ block.super }}{% endif %}{% endblock %}
 {% block keywords %}{% if content.keywords %}{{content.keywords }}{% else %}{{ block.super }}{% endif %}{% endblock %}
 {% block description %}{% if content.description %}{{content.description }}{% else %}{{ block.super }}{% endif %}{% endblock %}
 
