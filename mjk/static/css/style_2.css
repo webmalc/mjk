@@ -9185,3 +9185,14 @@ section.main__1 {
     display: none;
   }
 }
+
+.calllink {
+  display: inline-block;
+  background-color: #d3d3d3;
+  border-radius: 2px;
+  padding: 10px;
+  transition: padding 0.2s ease;
+}
+.calllink:hover {
+  padding: 8px;
+}

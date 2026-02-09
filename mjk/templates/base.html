@@ -68,12 +68,12 @@
     <ul class=""><li><a class="active" href="{% url 'content:index' %}">Главная</a></li><li><a href="{% url 'content:about' %}" >О компании</a></li><li class="header__menu--dropdown"><a href="{% url 'content:services' %}">Услуги</a><ul class=""><li class="first"><a href="{% url 'content:services_cleaning' %}" >Клининг</a></li><li><a href="{% url 'content:services_exploitation' %}" >Эксплуатация</a></li><li><a href="{% url 'content:services_management' %}" >Управление</a></li><li class="last"><a href="{% url 'content:services_security' %}" >Безопасность</a></li></ul></li><li><a href="{% url 'content:objects' %}" >Объекты</a></li><li class="last"><a href="{% url 'content:content' slug='contacts' %}" >Контакты</a></li></ul></nav>            </div>
             <div
                 class="col-auto d-none d-lg-flex flex-column align-items-start px-0 px-md-3 header-phone-mail-after-md">
-                <a class="header__phone" href="tel:">+7 495 500 50 80</a>                <a class="header__mail" href="mailto:aranda@mgk-group.ru">aranda@mgk-group.ru</a>            </div>
+                <a class="header__phone" href="tel:+74955005080">+7 495 500 50 80</a>                <a class="header__mail" href="mailto:aranda@mgk-group.ru">aranda@mgk-group.ru</a>            </div>
             <div class="col-auto d-none d-lg-block px-0 pl-sm-2 pr-sm-3 header-button-after-sm">
-                <button class="button button__gray open__kp">Запросить КП</button>
+              <button class="button button__gray" onclick="window.location.href='{% url 'content:content' slug='contacts' %}';" >Заказать звонок</button>
             </div>
             <div class="col-auto d-lg-none pl-0">
-                <a class="header__mobile__phone" href="tel:">495 500 5080</a>
+                <a class="header__mobile__phone" href="tel:+74955005080">495 500 5080</a>
                 <button class="hamburger hamburger--collapse" type="button">
                     <span class="hamburger-box">
                         <span class="hamburger-inner">
@@ -92,34 +92,22 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-xl-auto">
-                <div class="footer__links footer__links-desktop">
-                                        <a href="https://itunes.apple.com/app/id6743001150?utm_source=domyland.app" target="_blank">
-                        <img src="{% static 'img/app-store.png' %}" width="157" height="46" alt="" loading="lazy" decoding="async">
-                    </a>
-                                                            <a href="https://play.google.com/store/apps/details?id=ru.domyland.uk_jks_fm&utm_source=domyland.app" target="_blank">
-                        <img src="{% static 'img/google-play.png' %}" width="157" height="46" alt="" loading="lazy" decoding="async">
-                    </a>
-                                                            <a href="https://www.rustore.ru/catalog/app/ru.domyland.uk_jks_fm" target="_blank">
-                        <img src="{% static 'img/ru-store.png' %}" width="157" height="46" alt="" loading="lazy" decoding="async">
-                    </a>
-                                    </div>
-                <a class="footer__policy" href="{% url 'content:privacy_policy' %}">Политика конфиденциальности</a>
-                &nbsp;
-                <a class="footer__policy" href="https://mjk.ru/documents/">Документы</a>
+                <div class="footer__links footer__links-desktop"></div>
             </div>
             <div class="col-md offset-xl-2 offset-lg-1">
                 <div class="row justify-content-sm-between">
                     <div class="col-sm-auto">
-                        <ul class="footer__list"><li class="first active"><a href="{% url 'content:index' %}" >Главная</a></li><li><a href="{% url 'content:about' %}" >О компании</a></li><li class="last"><a href="{% url 'content:objects' %}" >Объекты</a></li></ul>
+                        <ul class="footer__list">
+                          <li class="first"><a href="{% url 'content:index' %}" >Главная</a></li>
+                          <li><a href="{% url 'content:about' %}" >О компании</a></li>
+                          <li><a href="{% url 'content:about' %}" >Услуги</a></li>
+                          <li class="last"><a href="{% url 'content:objects' %}" >Объекты</a></li>
+                        </ul>
                     </div>
                     <div class="col-sm-auto">
                         <ul class="footer__list">
-                            <li>
-                                <a href="{% url 'content:services' %}">Услуги</a>
-                            </li>
+                          <li class="first calllink"><a href="{% url 'content:content' slug='contacts' %}" style="color: #333;">Заказать звонок</a></li>
                         </ul>
-                        <ul class="footer__list--inner">
-                            <ul class=""><li class="first"><a href="{% url 'content:services_cleaning' %}" >Клининг</a></li><li><a href="{% url 'content:services_exploitation' %}" >Эксплуатация</a></li><li><a href="{% url 'content:services_management' %}" >Управление</a></li><li class="last"><a href="{% url 'content:services_security' %}" >Безопасность</a></li></ul>                        </ul>
                     </div>
                     <div class="col-sm-auto">
                         <ul class="footer__list">
@@ -127,11 +115,11 @@
                                 <a href="{% url 'content:content' slug='contacts' %}">Контакты</a>
                             </li>
                         </ul>
-                                                <a class="footer__info" href="tel:">+7 495 500 50 80
+                                                <a class="footer__info" href="tel:+74955005080">+7 495 500 50 80
                             </a>
                         <br>
                                                                         <a class="footer__info" href="mailto:aranda@mgk-group.ru">aranda@mgk-group.ru</a>
-                                                <div class="footer__develop">© 2026 mjk<br>
+                                                <div class="footer__develop">© {% now "Y" %} МЖК менеджмент<br>
 
                         </div>
                     </div>
@@ -139,39 +127,8 @@
             </div>
         </div>
     </div>
-</footer>    <div class="modal modal__feedback">
-    <div class="container">
-        <div class="modal__container">
-            <div class="modal__close"></div>
-            <form method="post" class="form ajax_form" action="{% url 'content:index' %}">
-    <div class="form__title"> Запросить КП</div>
-    <div class="form__input">
-        <input type="text" placeholder="Имя" value="" name="name">
-        <span>Некорректно</span>
-    </div>
-    <div class="form__input"> <input class="phone" type="text" placeholder="Телефон" value="" name="tel">
-        <span>Некорректно</span>
-    </div>
-    <div class="row mx-n1 align-items-center mt-3 mt-lg-4">
-        <div class="col-auto px-1">
-            <label class="mb-0">
-                <input type="checkbox" name="checkbox" checked>
-                <span>
+</footer>
 
-                </span>
-            </label>
-        </div>
-        <div class="col px-1">
-            <p class="form__agree"> Нажимая на кнопку я даю согласие на обработку персональных данных
-            </p>
-        </div>
-    </div>
-    <button class="button button__black"> Отправить</button>
-
-	<input type="hidden" name="af_action" value="72a77efbe22632bd563ab7a304dd861b" />
-</form>        </div>
-    </div>
-</div>
 <div class="modal modal__feedback-success">
     <div class="container">
         <div class="form modal__container">
@@ -182,278 +139,7 @@
     </div>
 </div>
 
-<div class="modal modal__kp">
-    <div class="container">
-        <div class="modal__container">
-            <div class="modal__close"></div>
-            <form method="post" class="form ajax_form" action="{% url 'content:index' %}">
-    <div class="form__title"> Запросить КП</div>
-    <div class="row mx-n2 align-items-end">
-        <div class="col-md-6 px-2">
-            <label class="required">Статус здания*</label>
-            <select class="required" name="status">
-                <option value="Жилое"> Жилое</option>
-                <option value="Нежилое"> Нежилое</option>
-            </select>
-        </div>
-        <div class="col-md-6 px-2">
-            <label class="required">Адрес объекта*</label>
-            <div class="form__input2 required">
-                <input type="text" placeholder="" value="" name="address">
-                <span>Некорректно</span>
-            </div>
-        </div>
-    </div>
-    <div class="row mx-n2 align-items-end">
-        <div class="col-md-4 px-2">
-            <label>Год приёмки</label>
-            <div class="form__input2">
-                <input type="number" placeholder="" value="" name="year">
-                <span>Некорректно</span>
-            </div>
-        </div>
-        <div class="col-md-4 px-2">
-            <label class="required">Количество подъездов*</label>
-            <div class="form__input2 required">
-                <input type="number" placeholder="" value="" name="entrances">
-                <span>Некорректно</span>
-            </div>
-        </div>
-        <div class="col-md-4 px-2">
-            <label class="required">Количество этажей*</label>
-            <div class="form__input2 required">
-                <input type="number" placeholder="" value="" name="floors">
-                <span>Некорректно</span>
-            </div>
-        </div>
-    </div>
-    <div class="row mx-n2 align-items-end">
-        <div class="col-md-3 px-2">
-            <label>Закрытая территория</label>
-            <select name="closed">
-                <option value="Да"> Да</option>
-                <option value="Нет"> Нет</option>
-            </select>
-        </div>
-        <div class="col-md-3 px-2">
-            <label>Подземный гараж</label>
-            <select name="garage">
-                <option value="Есть"> Есть</option>
-                <option value="Нет"> Нет</option>
-            </select>
-        </div>
-        <div class="col-md-3 px-2">
-            <label>Общая площадь помещений без балконов и лоджий, м2</label>
-            <div class="form__input2">
-                <input type="number" placeholder="" value="" name="square">
-                <span>Некорректно</span>
-            </div>
-        </div>
-        <div class="col-md-3 px-2">
-            <label>Уборочная площадь МОП, м2</label>
-            <div class="form__input2">
-                <input type="number" placeholder="" value="" name="square2">
-                <span>Некорректно</span>
-            </div>
-        </div>
-    </div>
-    <div class="modal__kp--subtitle">Лифты</div>
-    <div class="row mx-n2 align-items-end">
-        <div class="col-6 col-md-4 col-lg px-2">
-            <label class="required">Количество*</label>
-            <div class="form__input2 required">
-                <input type="number" placeholder="" name="amount" value="">
-                <span>Некорректно</span>
-            </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg px-2">
-            <label>Марка</label>
-            <div class="form__input2">
-                <input type="text" placeholder="" value="" name="brand">
-                <span>Некорректно</span>
-            </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg px-2">
-            <label>Грузоподъёмность, кг</label>
-            <div class="form__input2">
-                <input type="text" placeholder="" value="" name="load">
-                <span>Некорректно</span>
-            </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg px-2">
-            <label>Скорость, м/с</label>
-            <div class="form__input2">
-                <input type="text" placeholder="" value="" name="speed">
-                <span>Некорректно</span>
-            </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg px-2">
-            <label>Количество остановок</label>
-            <div class="form__input2">
-                <input type="text" placeholder="" value="" name="stops">
-                <span>Некорректно</span>
-            </div>
-        </div>
-    </div>
-    <div class="row mx-n2 align-items-end">
-        <div class="col-md-6 px-2">
-            <label>Материал фасадов</label>
-            <div class="form__input2">
-                <input type="text" placeholder="" value="" name="material">
-                <span>Некорректно</span>
-            </div>
-        </div>
-        <div class="col-md-6 px-2">
-            <label class="required">ИТП/ЦТП*</label>
-            <select class="required" name="etc">
-                <option value="Есть"> Есть</option>
-                <option value="Нет"> Нет</option>
-            </select>
-        </div>
-    </div>
-    <div class="row mx-n2 align-items-end">
-        <div class="col-md-3 px-2">
-            <label class="required">Обслуживание прилегающей
-                территории</label>
-            <select class="required" name="service">
-                <option value="Да"> Да</option>
-                <option value="Нет"> Нет</option>
-            </select>
-        </div>
-        <div class="col-md-3 px-2">
-            <label>Принудительная приточная вентиляция в
-                квартирах</label>
-            <select name="ventilation">
-                <option value="Есть"> Есть</option>
-                <option value="Нет"> Нет</option>
-            </select>
-        </div>
-        <div class="col-md-3 px-2">
-            <label>Принудительная вытяжная вентиляция в квартирах</label>
-            <select name="ventilation2">
-                <option value="Есть"> Есть</option>
-                <option value="Нет"> Нет</option>
-            </select>
-        </div>
-        <div class="col-md-3 px-2">
-            <label>Система ДУ и ППА</label>
-            <select name="system">
-                <option value="Есть"> Есть</option>
-                <option value="Нет"> Нет</option>
-            </select>
-        </div>
-    </div>
-    <div class="row mx-n2 align-items-end">
-        <div class="col-md-3 px-2">
-            <label>Мусоропровод</label>
-            <select name="chute">
-                <option value="Да"> Да</option>
-                <option value="Нет"> Нет</option>
-            </select>
-        </div>
-        <div class="col-md-3 px-2">
-            <label>Система контроля и управления доступа</label>
-            <select name="system2">
-                <option value="Есть"> Есть</option>
-                <option value="Нет"> Нет</option>
-            </select>
-        </div>
-        <div class="col-md-3 px-2">
-            <label>Домофон</label>
-            <select name="intercom">
-                <option value="Есть"> Есть</option>
-                <option value="Нет"> Нет</option>
-            </select>
-        </div>
-        <div class="col-md-3 px-2">
-            <label>Видеонаблюдение</label>
-            <select name="video">
-                <option value="Есть"> Есть</option>
-                <option value="Нет"> Нет</option>
-            </select>
-        </div>
-    </div>
-    <div class="row mx-n2 align-items-end">
-        <div class="col-md-3 px-2">
-            <label>Автоматические ворота</label>
-            <select name="gates">
-                <option value="Есть"> Есть</option>
-                <option value="Нет"> Нет</option>
-            </select>
-        </div>
-        <div class="col-md-3 px-2">
-            <label>Автоматические двери</label>
-            <select name="doors">
-                <option value="Есть"> Есть</option>
-                <option value="Нет"> Нет</option>
-            </select>
-        </div>
-        <div class="col-md-3 px-2">
-            <label>Видеодомофоны</label>
-            <select name="intercoms">
-                <option value="Есть"> Есть</option>
-                <option value="Нет"> Нет</option>
-            </select>
-        </div>
-        <div class="col-md-3 px-2">
-            <label>Консьержи/охрана</label>
-            <select name="security">
-                <option value="Круглосуточно"> Круглосуточно</option>
-                <option value="Нет"> Нет</option>
-            </select>
-        </div>
-    </div>
-    <div class="row mx-n2 align-items-end">
-        <div class="col-md-6 px-2">
-            <label>Прочее</label>
-            <div class="form__input2">
-                <input type="text" placeholder="" value="" name="other">
-                <span>Некорректно</span>
-            </div>
-        </div>
-        <div class="col-md-6 px-2">
-            <label>Особенности</label>
-            <div class="form__input2">
-                <input type="text" placeholder="" value="" name="particular">
-                <span>Некорректно</span>
-            </div>
-        </div>
-    </div>
-    <div class="row mx-n2 align-items-end">
-        <div class="col-md-6 px-2">
-            <label>Строительные недоделки</label>
-            <div class="form__input2">
-                <input type="text" placeholder="" value="" name="imperfections">
-                <span>Некорректно</span>
-            </div>
-        </div>
-        <div class="col-md-6 px-2">
-            <label class="required">Контакты*</label>
-            <div class="form__input2 required">
-                <input class="phone" type="text" placeholder="" value="" name="contact">
-                <span>Некорректно</span>
-            </div>
-        </div>
-    </div>
-    <div class="row mx-n1 align-items-center mt-3 mt-lg-4">
-        <div class="col-auto px-1">
-            <label class="mb-0">
-                <input type="checkbox" name="checkbox" checked>
-                <span>
-                </span>
-            </label>
-        </div>
-        <div class="col px-1">
-            <p class="form__agree"> Нажимая на кнопку я даю согласие на обработку персональных данных
-            </p>
-        </div>
-    </div>
-    <button class="button button__black"> Запросить</button>
-
-	<input type="hidden" name="af_action" value="9c5acba85282fb0ea6f826fa82ee3268" />
-</form>        </div>
-    </div>
-</div>    <script src="{% static 'js/jquery.min.js' %}"> </script>
+<script src="{% static 'js/jquery.min.js' %}"> </script>
 <script src="{% static 'js/jquery.mask.min.js' %}"> </script>
 <script src="{% static 'js/swiper-bundle.min.js' %}"> </script>
 <script src="{% static 'js/checkWebP.js' %}"> </script>
