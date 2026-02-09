@@ -543,6 +543,18 @@ wheels = [
 ]
 
 [[package]]
+name = "django-reversion"
+version = "6.1.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "django" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/9b/8b/72000ad3ba05cb72134f62ad093267e3d83d8fdf1406102d2a1a2ec7d55e/django_reversion-6.1.0.tar.gz", hash = "sha256:31dd7fee02e2a21af7c2d0a61c1c0f27ba07df2317c9a0a3f31d3ee40069025d", size = 76140, upload-time = "2025-12-12T20:23:51.948Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/5e/8e/c80904ce5cb94f78cdd7d794cb7b4a8e8891a7515621bbce5f2a45de6555/django_reversion-6.1.0-py3-none-any.whl", hash = "sha256:1f5815791d9accdb0bad9d5982668f217dc65225be57041ae9641dbdcd838ce3", size = 86196, upload-time = "2025-12-12T20:23:50.18Z" },
+]
+
+[[package]]
 name = "django-stubs"
 version = "5.2.8"
 source = { registry = "https://pypi.org/simple" }
@@ -971,6 +983,7 @@ dependencies = [
     { name = "django-environ" },
     { name = "django-model-utils" },
     { name = "django-redis" },
+    { name = "django-reversion" },
     { name = "flower" },
     { name = "gunicorn" },
     { name = "hiredis" },
@@ -1019,6 +1032,7 @@ requires-dist = [
     { name = "django-environ", specifier = "==0.12.0" },
     { name = "django-model-utils", specifier = "==5.0.0" },
     { name = "django-redis", specifier = "==6.0.0" },
+    { name = "django-reversion", specifier = "==6.1.0" },
     { name = "flower", specifier = "==2.0.1" },
     { name = "gunicorn", specifier = "==23.0.0" },
     { name = "hiredis", specifier = "==3.3.0" },

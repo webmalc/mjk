@@ -276,3 +276,4 @@ mjk/media/
 .env
 .envs/*
 !.envs/.local/
+backups/

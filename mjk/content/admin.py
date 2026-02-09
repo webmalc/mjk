@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django import forms
 from .models import Content, Feedback
+from reversion.admin import VersionAdmin
 
 
 class ContentAdminForm(forms.ModelForm):
@@ -13,7 +14,7 @@ class ContentAdminForm(forms.ModelForm):
 
 
 @admin.register(Content)
-class ContentAdmin(admin.ModelAdmin):
+class ContentAdmin(VersionAdmin):
     form = ContentAdminForm
     list_display = ["slug", "title", "created_at", "updated_at"]
     search_fields = ["slug", "title", "content", "description"]
@@ -38,7 +39,7 @@ class ContentAdmin(admin.ModelAdmin):
 
 
 @admin.register(Feedback)
-class FeedbackAdmin(admin.ModelAdmin):
+class FeedbackAdmin(VersionAdmin):
     list_display = ["name", "phone", "email", "is_active", "created_at", "updated_at"]
     list_filter = ["is_active", "created_at", "updated_at"]
     search_fields = ["name", "phone", "email", "note"]
