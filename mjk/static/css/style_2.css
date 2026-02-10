@@ -9108,9 +9108,9 @@ iframe {
     display: inline-flex !important;
   }
 }
-.webp .item__2--container {
-  background: #979ba2;
-}
+/* .webp .item__2--container { */
+/*   background: #979ba2; */
+/* } */
 .webp .item__4:before {
   background: none ;
 }
@@ -9201,11 +9201,14 @@ section.main__1 {
 .services-container {
   margin-bottom: 70px;
 }
-.services-container picture {
+.services-container picture, .main__2--img {
   background: rgba(0, 0, 0, 0.7);
   filter: brightness(80%);
 }
 .services-container p {
   font-size: 20px;
   margin-bottom: 10px;
+}
+.main__3 h4 {
+  margin-bottom: 0px;
 }
