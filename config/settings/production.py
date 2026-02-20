@@ -173,3 +173,7 @@ CSRF_TRUSTED_ORIGINS = ["http://90.156.203.84"]
 CSRF_COOKIE_SECURE = False  # Allow HTTP (not HTTPS)
 CSRF_COOKIE_SAMESITE = "Lax"  # Allow cross-site requests
 SESSION_COOKIE_SECURE = False  # Allow HTTP sessions
+
+locals().update(env.email())
+DEFAULT_FROM_EMAIL = env.str("DEFAULT_FROM_EMAIL")
+SERVER_EMAIL = env.str("SERVER_EMAIL")
