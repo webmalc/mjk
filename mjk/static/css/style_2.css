@@ -9212,3 +9212,10 @@ section.main__1 {
 .main__3 h4 {
   margin-bottom: 0px;
 }
+
+@media (max-width: 365px) {
+
+  .header__mobile__phone {
+    display: none;
+  }
+
