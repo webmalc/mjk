@@ -9,6 +9,7 @@ urlpatterns = [
     path("admin/clearcache/", include("clearcache.urls")),
     path(settings.ADMIN_URL, admin.site.urls),
     path("", include("mjk.content.urls", namespace="content")),
+    path(r"filer/", include("filer.urls")),
     *static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT),
 ]
 
@@ -33,6 +34,12 @@ if settings.DEBUG:
         ),
         path("500/", default_views.server_error),
     ]
+
+    from django.conf.urls.static import static
+    from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
+    urlpatterns += staticfiles_urlpatterns()
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     if "debug_toolbar" in settings.INSTALLED_APPS:
         import debug_toolbar
 

@@ -9,7 +9,6 @@ from .tasks import send_feedback_notification_email
 CACHE_TIMEOUT = 60 * 60 * 24 * 7 * 30  # 30 days
 
 
-@cache_page(CACHE_TIMEOUT)
 def content_render(request, slug="index"):
     if request.method == "POST" and slug == "contacts":
         return add_feedback(request)
