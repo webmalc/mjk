@@ -1,15 +1,15 @@
-from django.shortcuts import render, get_object_or_404, redirect
-from django.views.decorators.cache import cache_page
-from .models import Content, Feedback
+from django.shortcuts import get_object_or_404
+from django.shortcuts import redirect
+from django.shortcuts import render
+from django.template import RequestContext
 from django.template import Template
 from django.utils.safestring import mark_safe
-from django.template import RequestContext
+
+from .models import Content
+from .models import Feedback
 from .tasks import send_feedback_notification_email
 
-CACHE_TIMEOUT = 60 * 60 * 24 * 7 * 30  # 30 days
 
-
-@cache_page(CACHE_TIMEOUT)
 def content_render(request, slug="index"):
     if request.method == "POST" and slug == "contacts":
         return add_feedback(request)
